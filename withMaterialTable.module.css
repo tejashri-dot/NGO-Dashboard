@@ -1,0 +1,81 @@
+/* Base Styles */
+.Container {
+  margin: 1rem;
+  /* background: linear-gradient(rgba(247, 222, 214, 0.4), rgba(248, 206, 188, 0.6)), var(--bg-color); */
+  border-radius: 30px;
+  color: var(--text-color); /* Dynamically change text color */
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+}
+
+.Heading {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-color); /* Dynamically change text color */
+}
+
+.TableWrapper {
+  padding: 10px;
+  background-color: var(--table-bg-color); /* Dynamically change table background */
+  border: 1px solid var(--table-border-color); /* Dynamically change border color */
+}
+
+/* Add custom table styles */
+.Table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+.Table th, .Table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.Table th {
+  background-color: var(--table-header-bg-color); /* Dynamically change table header background */
+  color: var(--table-header-text-color); /* Dynamically change table header text color */
+  
+}
+
+.Table tr:nth-child(even) {
+  background-color: var(--table-even-row-bg-color); /* Dynamically change background of even rows */
+}
+
+.Table tr:hover {
+  background-color: var(--table-hover-bg-color); /* Dynamically change background on hover */
+}
+
+.AddButton {
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+  width: 100%;
+}
+
+.AddButton:hover {
+  background-color: var(--button-bg-color);
+}
+
+/* Responsive Styling */
+@media (min-width: 600px) {
+  .Header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .TableWrapper {
+    padding: 20px;
+  }
+  
+  .AddButton {
+    width: auto;
+  }
+}

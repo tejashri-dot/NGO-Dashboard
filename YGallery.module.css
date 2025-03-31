@@ -1,0 +1,763 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a3c34;
+  }
+  
+  .actionButton {
+    background: linear-gradient(165deg, #efa423 0%, #f04333 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: opacity 0.3s;
+  }
+  
+  .actionButton:hover {
+    opacity: 0.9;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .uploadForm {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .uploadForm h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a3c34;
+    margin-bottom: 20px;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .formGroup label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .formGroup textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .formActions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  
+  .submitButton {
+    background: linear-gradient(165deg, #efa423 0%, #f04333 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+  }
+  
+  .submitButton:hover {
+    opacity: 0.9;
+  }
+  
+  .cancelButton {
+    background: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .cancelButton:hover {
+    background: #e0e0e0;
+  }
+  
+  .galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .galleryItem {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .galleryItem:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .galleryImage {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .noImage {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .itemDetails {
+    padding: 15px;
+  }
+  
+  .itemTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a3c34;
+    margin-bottom: 5px;
+  }
+  
+  .itemCategory {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .itemDescription {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .itemTags {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .itemStats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .likeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    margin-left: 5px;
+  }
+  
+  .likeButton:hover {
+    color: #ff4d4f;
+  }
+  
+  .container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .uploadForm {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .formGroup input,
+  .formGroup textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .fileUpload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .submitButton {
+    padding: 10px 20px;
+    background-color: #7497be;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submitButton:hover {
+    background-color: #612121;
+  }
+  
+  .galleryTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .galleryTable th,
+  .galleryTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .galleryTable th {
+    background-color: #f5f5f5;
+  }
+  /* Existing styles remain unchanged, add these new ones */
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pageButton {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pageButton:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.pageButton.active {
+  background-color: #15ff00;
+  color: white;
+  border-color: #007bff;
+}
+
+.pageButton:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+/* Existing styles remain unchanged, add these new ones */
+
+.uploadInfoButton {
+  padding: 10px 20px;
+  background-color: #d07c27;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 50px;
+}
+
+.uploadInfoButton:hover {
+  background-color: #0056b3;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+.paginationButton {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.paginationButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Image Preview */
+.imagePreview {
+  margin-top: 20px;
+  text-align: center;
+}
+.imagePreview h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.closeButton {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.closeButton:hover {
+  background-color: #cc0000;
+}
+
+/* Image Preview */
+.imagePreview {
+  margin-top: 20px;
+  text-align: center;
+}
+.imagePreview h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Modal Styles with Frosted Glass Effect */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; /* Inherits the background image from .modal */
+  filter: blur(10px); /* Applies blur to the background */
+  opacity: 0.7; /* Reduces opacity for a frosted effect */
+  z-index: -1; /* Places it behind the content */
+}
+
+.modalContent {
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white for content */
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Ensures content is above the blurred background */
+}
+
+.closeButton {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: #cc0000;
+}
+
+/* Image Preview */
+.imagePreview {
+  margin-top: 20px;
+  text-align: center;
+}
+.imagePreview h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.previewContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Modal Styles with Frosted Glass Effect */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; /* Inherits the background image from .modal */
+  filter: blur(10px); /* Applies blur to the background */
+  opacity: 0.7; /* Reduces opacity for a frosted effect */
+  z-index: -1; /* Places it behind the content */
+}
+
+.modalContent {
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white for content */
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Ensures content is above the blurred background */
+}
+
+.closeButton {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: #cc0000;
+}
+
+/* Existing styles for pagination, etc., remain unchanged */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+.paginationButton {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.paginationButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Existing styles remain mostly unchanged, add or update these */
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.filterLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.filterInput {
+  padding: 8px;
+  width: 150px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.galleryTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.galleryTable th,
+.galleryTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.galleryTable th {
+  background-color: #f4f4f4;
+}
+
+.galleryTable th label {
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+.actionButton svg {
+  color: #007bff;
+}
+
+.actionButton:hover svg {
+  color: #0056b3;
+}
+
+.cancelButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cancelButton:hover {
+  background-color: #d32f2f;
+}
+
+.formGroup label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+/* Existing styles remain mostly unchanged, add or update these */
+.actionButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0; /* Remove padding to fit IconButton style */
+}
+
+.actionButton svg {
+  font-size: 24px; /* Adjust size of React logo */
+}
+
+/* Ensure other styles like .container, .galleryTable, etc., remain intact */
+
+
+
+/* Multiple Images Upload Styles */
+.fileUpload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.fileUpload span {
+  font-size: 14px;
+  color: #666;
+}
+
+.previewContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.imagePreviewItem {
+  position: relative;
+}
+
+.previewImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.removeImageButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0;
+}
+
+.itemImages {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.thumbnailImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.moreImages {
+  background: #f0f0f0;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.formButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.imageModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.enlargedImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+/* Existing styles... */

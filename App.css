@@ -1,0 +1,159 @@
+body[data-theme='light'] {
+  background-color: #f5f5f7;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --highlight-color: #4b1501;
+  --hover-bg-color: #6d3e2d;
+  --active-bg-color: #e24f1a;
+}
+
+/* Dark Theme */
+body[data-theme='dark'] {
+  background-color: #121212;
+  color: #f5f5f7;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  --bg-color: #2f3640;
+  --text-color: #dcdde1;
+  --highlight-color: #e4af9c;
+  --hover-bg-color: #6d3e2d;
+  --active-bg-color: #e24f1a;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.toggle-button {
+  background-color: var(--active-bg-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.toggle-button:hover {
+  background-color: var(--hover-bg-color);
+}
+
+.sidebar.open + .toggle-button {
+  left: 250px;
+}
+
+.sidebar.closed + .toggle-button {
+  left: 10px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  border-radius: 30px;
+  margin: 10px 10px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-y: auto;
+  position: fixed;
+  height: 96vh;
+  transition: transform 0.3s ease;
+}
+
+.sidebar.closed {
+  transform: translateX(-250px);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+}
+
+/* Hide Scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Sidebar Closed and Main Content */
+.sidebar.closed + .main-content {
+  margin-left: 0;
+}
+
+/* Light Theme Specific Styles */
+body[data-theme='light'] .sidebar {
+  color: #333;
+}
+
+body[data-theme='light'] .main-content {
+  background-color: #f5f5f7;
+}
+
+/* Dark Theme Specific Styles */
+body[data-theme='dark'] .sidebar {
+  background-color: #333;
+  color: #f5f5f7;
+}
+
+body[data-theme='dark'] .main-content {
+  background-color: #121212;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+  .main-content {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+  }
+  .main-content {
+    margin-left: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    position: fixed;
+    height: 100%;
+    z-index: 998;
+    transform: translateX(-250px);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .toggle-button {
+    top: 10px;
+    left: 10px;
+  }
+}
